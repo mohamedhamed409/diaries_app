@@ -11,9 +11,13 @@ class DiariesApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      theme: ThemeData(brightness: Brightness.dark),
-      home:const  NotesView(),
+    return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        fontFamily: 'Poppins',
+        
+        ),
+      home: const NotesView(),
       debugShowCheckedModeBanner: false,
     );
   }
