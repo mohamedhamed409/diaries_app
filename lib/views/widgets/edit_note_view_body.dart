@@ -1,5 +1,5 @@
 import 'package:diaries_app/views/widgets/custom_appbar.dart';
-import 'package:diaries_app/views/widgets/custom_textfield.dart';
+import 'package:diaries_app/views/widgets/custom_textformfield.dart';
 import 'package:flutter/material.dart';
 
 class EditNoteViewBody extends StatelessWidget {
@@ -23,13 +23,13 @@ class EditNoteViewBody extends StatelessWidget {
           SizedBox(
             height: 16,
           ),
-          CustomTextField(
+          CustomTextFormField(
             hint: 'title',
           ),
           SizedBox(
             height: 16,
           ),
-          CustomTextField(
+          CustomTextFormField(
             hint: 'content',
             maxLines: 5,
           ),
