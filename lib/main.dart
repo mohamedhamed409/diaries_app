@@ -1,7 +1,12 @@
 import 'package:diaries_app/views/notes_view.dart';
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
+import 'constants.dart';
+
+void main() async {
+  await Hive.initFlutter(); //import hive_flutter
+  await Hive.openBox(kNoteBox);
   runApp(const DiariesApp());
 }
 
@@ -15,8 +20,7 @@ class DiariesApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
         fontFamily: 'Poppins',
-        
-        ),
+      ),
       home: const NotesView(),
       debugShowCheckedModeBanner: false,
     );
