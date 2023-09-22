@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'widgets/add_note_bottomsheet.dart';
 import 'widgets/notes_view_body.dart';
 
-class NotesView extends StatelessWidget {
+ class NotesView extends StatelessWidget {
   const NotesView({super.key});
 
   @override
