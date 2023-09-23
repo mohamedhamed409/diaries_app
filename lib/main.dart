@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import 'constants.dart';
+import 'models/note_model.dart';
 
 void main() async {
   await Hive.initFlutter(); //import hive_flutter
   await Hive.openBox(kNoteBox);
+  Hive.registerAdapter(NoteModelAdapter());
   runApp(const DiariesApp());
 }
 
