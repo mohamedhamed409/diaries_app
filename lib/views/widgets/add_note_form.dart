@@ -1,4 +1,7 @@
+import 'package:diaries_app/cubits/add_note_cubit/add_note_cubit.dart';
+import 'package:diaries_app/models/note_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'custom_button.dart';
 import 'custom_textformfield.dart';
