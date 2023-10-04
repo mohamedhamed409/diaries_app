@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'custom_button.dart';
 import 'custom_textformfield.dart';
+
 class AddNoteForm extends StatelessWidget {
   AddNoteForm({super.key});
 
@@ -46,6 +47,12 @@ class AddNoteForm extends StatelessWidget {
               onTap: () {
                 if (formKey.currentState!.validate()) {
                   formKey.currentState!.save();
+                  var noteModel = NoteModel(
+                      title: title!,
+                      content: content!,
+                      date: DateTime.now().toString(),
+                      color: Colors.green.value);
+                  BlocProvider.of<AddNoteCubit>(context).addNote(noteModel);
                 } else {
                   autovalidateMode = AutovalidateMode.always;
                 }

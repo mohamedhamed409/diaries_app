@@ -1,4 +1,3 @@
-
 import 'package:bloc/bloc.dart';
 import 'package:diaries_app/constants.dart';
 import 'package:hive/hive.dart';
@@ -12,7 +11,7 @@ class AddNoteCubit extends Cubit<AddNoteStates> {
     try {
       emit(AddNoteLoadingState());
       Box<NoteModel> noteBox = Hive.box<NoteModel>(kNoteBox);
-      await noteBox.add(note); 
+      await noteBox.add(note);
       emit(AddNoteSuccessState());
     } catch (e) {
       emit(AddNoteFailureState(e.toString()));
