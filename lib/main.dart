@@ -8,7 +8,7 @@ import 'constants.dart';
 import 'models/note_model.dart';
 
 void main() async {
-    WidgetsFlutterBinding.ensureInitialized();
+    // WidgetsFlutterBinding.ensureInitialized();
       Bloc.observer = SimpleBlocObserver();
 
   await Hive.initFlutter(); //import hive_flutter

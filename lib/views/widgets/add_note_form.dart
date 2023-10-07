@@ -10,7 +10,8 @@ import 'custom_textformfield.dart';
 class AddNoteForm extends StatelessWidget {
   AddNoteForm({super.key});
 
-  final GlobalKey<FormState> formKey = GlobalKey();
+  static final GlobalKey<FormState> formKey =
+      GlobalKey(); //static to make keyboard wait but what is reason
   String? title, content;
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
 
